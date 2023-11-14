@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:e_commerce_app/model/date_model.dart';
 
 class DioEcommerce {
   static Dio? objectdio;
