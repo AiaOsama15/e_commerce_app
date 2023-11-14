@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/cubit/get_catogery/cubit_get_catogery.dart';
+import 'package:e_commerce_app/scr/core/utilits/assets_manger.dart';
 import 'package:e_commerce_app/shared/constant.dart';
 import 'package:e_commerce_app/shared/navigator.dart';
 import 'package:e_commerce_app/views/one_product_view.dart';
@@ -6,13 +7,13 @@ import 'package:flutter/material.dart';
 
 buildCirculaCatogory() {
   List<String> listOfImageCatogery = [
-    'assets/images/man_bag.png',
-    'assets/images/shirt.png',
-    'assets/images/man pants.png',
-    'assets/images/dress.png',
-    'assets/images/woman shoes.png',
-    'assets/images/skirt.png',
-    'assets/images/bikini.png',
+    AssetManager.manBag,
+    AssetManager.shirt,
+    AssetManager.manPants,
+    AssetManager.dress,
+    AssetManager.womanShoes,
+    AssetManager.skirt,
+    AssetManager.bikini,
   ];
   List<String> listOfImageNamesCatogery = [
     'M_bag',

@@ -1,4 +1,9 @@
+import 'package:e_commerce_app/scr/config/routes/routes.dart';
+import 'package:e_commerce_app/scr/config/themes/app_theme.dart';
+import 'package:e_commerce_app/scr/core/utilits/app_strings.dart';
 import 'package:e_commerce_app/views/home_view.dart';
+import 'package:e_commerce_app/views/login_view.dart';
+import 'package:e_commerce_app/views/register_view.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -9,17 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter e_commerce',
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          color: Colors.white,
-        ),
-        scaffoldBackgroundColor: Colors.white,
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.black),
-          titleLarge: TextStyle(color: Colors.black),
-        ),
-      ),
+      title: AppStrings.projectName,
+      theme: apptheme(),
+      routes: Routes.routes,
       home: const HomeView(),
     );
   }
