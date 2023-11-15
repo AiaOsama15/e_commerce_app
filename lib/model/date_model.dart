@@ -1,22 +1,25 @@
 import 'dart:convert';
 
+import 'package:equatable/equatable.dart';
+
 CatogeryDataModel catogeryDataFromJson(String str) =>
     CatogeryDataModel.fromJson(json.decode(str));
 
 String catogeryDataToJson(CatogeryDataModel data) => json.encode(data.toJson());
 
-class CatogeryDataModel {
-    final   bool status;
+class CatogeryDataModel extends Equatable {
+  final bool status;
   final dynamic message;
   final Data data;
 
-  CatogeryDataModel({
+  const CatogeryDataModel({
     required this.status,
     required this.message,
     required this.data,
   });
 
-  factory CatogeryDataModel.fromJson(Map<String, dynamic> json) => CatogeryDataModel(
+  factory CatogeryDataModel.fromJson(Map<String, dynamic> json) =>
+      CatogeryDataModel(
         status: json["status"],
         message: json["message"],
         data: Data.fromJson(json["data"]),
@@ -27,6 +30,9 @@ class CatogeryDataModel {
         "message": message,
         "data": data.toJson(),
       };
+
+  @override
+  List<Object?> get props => throw UnimplementedError();
 }
 
 class Data {
